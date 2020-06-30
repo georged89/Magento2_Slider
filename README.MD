@@ -1,4 +1,4 @@
-Instalation:
+Installation:
 
 composer config repositories.repo-name vcs https://github.com/georged89/Magento2_Slider.git
 
