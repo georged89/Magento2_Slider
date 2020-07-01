@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="georged" translate="label" sortOrder="300">
+            <label>GeorgeD</label>
+        </tab>
+        <section id="slider" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>GeorgeD Slider</label>
+            <tab>georged</tab>
+            <resource>Magento_Backend::content</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Slider Config</label>
+                <field id="order_direction"  type="select" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Slides Order Direction</label>
+                    <source_model>GeorgeD\Slider\Model\Source\Config\OrderDirection</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

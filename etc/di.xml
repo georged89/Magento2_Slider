@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="GeorgeD\Slider\Api\Data\SliderInterface" type="GeorgeD\Slider\Model\Slider" />
+    <preference for="GeorgeD\Slider\Api\SliderRepositoryInterface" type="GeorgeD\Slider\Model\SliderRepository" />
+
+    <virtualType name="GeorgeDSliderImageUploader" type="GeorgeD\Slider\Model\Uploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="const">GeorgeD\Slider\Model\Uploader::IMAGE_TMP_PATH</argument>
+            <argument name="basePath" xsi:type="const">GeorgeD\Slider\Model\Uploader::IMAGE_PATH</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="GeorgeD\Slider\Controller\Adminhtml\Image\Upload">
+        <arguments>
+            <argument name="uploader" xsi:type="object">GeorgeDSliderImageUploader</argument>
+        </arguments>
+    </type>
+
+    <type name="GeorgeD\Slider\Model\GenericUploader">
+        <arguments>
+            <argument name="uploaders" xsi:type="array">
+                <item name="image" xsi:type="string">GeorgeDSliderImageUploader</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>

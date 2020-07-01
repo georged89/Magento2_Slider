@@ -1,0 +1,46 @@
+<?php
+
+$slider = $this->getSliderData();
+
+?>
+
+<div class="owl-carousel owl-theme owl-slider georged-slider" data-mage-init='{"gdslider":{
+    "autoPlay": false,
+    "nav": true,
+    "dots": false,
+    "center" : false,
+    "loop": false,
+    "margin" :10,
+    "responsive":{
+        "300":{
+            "items":1
+        },
+        "450":{
+            "items":1
+        },
+        "768":{
+            "items":1
+        },
+        "1000":{
+            "items":1
+        },
+        "1024":{
+            "items":1
+        },
+        "1200":{
+            "items":1
+        }
+    }
+    }}'>
+    <?php foreach ($slider as $id => $values): ?>
+        <?php if (!empty($values['image'])): ?>
+            <div class="item" name="<?= $values['name'] ?>">
+                <a href="<?= $values['image_link']; ?>" class="slider-item">
+                    <span><?= $values['link_text'] ?></span>
+                    <span class="sliderImg"
+                          style="background-image: url('<?= $this->getUrl('pub/media') . 'georged/slider/image/image/' . $values['image'] ?>');"></span>
+                </a>
+            </div>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</div>

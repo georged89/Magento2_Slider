@@ -1,0 +1,22 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="GeorgeD_Slider::GeorgeD" title="GeorgeD" module="GeorgeD_Slider" sortOrder="200" resource="GeorgeD_Slider::GeorgeD"/>
+        <add
+                id="GeorgeD_Slider::slider"
+                title="Slider"
+                module="GeorgeD_Slider"
+                sortOrder="100"
+                parent="GeorgeD_Slider::GeorgeD"
+                resource="Magento_Backend::content"
+        />
+        <add
+                id="GeorgeD_Slider::slider_list"
+                title="Slider Manager"
+                module="GeorgeD_Slider"
+                sortOrder="10"
+                parent="GeorgeD_Slider::slider"
+                resource="Magento_Backend::admin"
+                action="slider/slider/index"
+        />
+    </menu>
+</config>

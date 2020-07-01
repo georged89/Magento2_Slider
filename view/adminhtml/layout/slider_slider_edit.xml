@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<slider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/slider_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="georged_slider_slider_form" />
+        </referenceContainer>
+    </body>
+</slider>

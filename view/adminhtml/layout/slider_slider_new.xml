@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<slider xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/slider_configuration.xsd">
+    <update handle="slider_slider_edit" />
+    <body>
+    </body>
+</slider>
