@@ -88,12 +88,12 @@ class Edit extends Action
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->_initAction();
         $resultPage->addBreadcrumb(
-            $id ? __('Edit Slider') : __('New Slider'),
-            $id ? __('Edit Slider') : __('New Slider')
+            $id ? __('Edit Banner') : __('New Banner'),
+            $id ? __('Edit Banner') : __('New Banner')
         );
         $resultPage->getConfig()->getTitle()->prepend(__('Sliders'));
         $resultPage->getConfig()->getTitle()
-            ->prepend($model->getId() ? 'Edit Slider: ' . $model->getFirstName() : __('New Slider'));
+            ->prepend($model->getId() ? 'Edit Banner: ' . $model->getFirstName() : __('New Banner'));
 
         return $resultPage;
     }

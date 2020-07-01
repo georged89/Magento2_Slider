@@ -18,7 +18,7 @@ class DeleteButton extends GenericButton implements ButtonProviderInterface
         $data = [];
         if ($this->getSliderId()) {
             $data = [
-                'label' => __('Delete Slider'),
+                'label' => __('Delete Banner'),
                 'class' => 'delete',
                 'on_click' => 'deleteConfirm(\'' . __(
                         'Are you sure you want to do this?'
